@@ -7,6 +7,7 @@ import { useSelector } from "react-redux";
 
 export default function Post() {
     const [post, setPost] = useState(null);
+   
     const { slug } = useParams();
     const navigate = useNavigate();
 
@@ -39,15 +40,23 @@ export default function Post() {
         });
     };
 
+ 
+
     return post ? (
         <div className="py-8">
+            <p className="text-sm mb-4 ml-2 bg-slate-500 p-3 rounded-lg">
+                        <span className="font-medium"><span className="font-bold text-indigo-900">Posted By</span> {post?.UserName}</span> {" "}
+                        <span className="text-xs">{new Date(post.$createdAt).toLocaleDateString()}</span>
+                    </p>
             <Container>
+            
                 <div className="w-full flex justify-center mb-4 relative border rounded-xl p-2">
                     <img
                         src={appwriteService.getFilePreview(post.featuredImage)}
                         alt={post.title}
                         className="rounded-xl"
                     />
+                   
 
                     {isAuthor && (
                         <div className="absolute right-6 top-6">
@@ -59,6 +68,7 @@ export default function Post() {
                             <Button bgColor="bg-red-500" onClick={deletePost}>
                                 Delete
                             </Button>
+                            
                         </div>
                     )}
                 </div>
