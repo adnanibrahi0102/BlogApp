@@ -1,4 +1,4 @@
-# Your Blog Name
+# BlogApp
 
 A simple and elegant blog built with [React](https://reactjs.org/) and powered by [Appwrite](https://appwrite.io/) for user authentication.
 
@@ -14,7 +14,7 @@ A simple and elegant blog built with [React](https://reactjs.org/) and powered b
 
 ## About
 
-This blog is a personal project created with React for the frontend and authenticated using [Appwrite](https://appwrite.io/). It provides a secure and user-authenticated platform for managing and sharing blog posts.
+This blog, named BlogApp, is a personal project created with React for the frontend and authenticated using [Appwrite](https://appwrite.io/). It provides a secure and user-authenticated platform for managing and sharing blog posts.
 
 ## Features
 
@@ -29,3 +29,6 @@ This blog is a personal project created with React for the frontend and authenti
 
    ```bash
    git clone https://github.com/adnanibrahi0102/BlogApp
+ cd BlogApp
+npm install
+npm start
