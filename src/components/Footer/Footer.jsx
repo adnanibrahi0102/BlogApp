@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer className="py-6 bg-gray-400 border-t-2 border-t-black">
       <div className="container mx-auto flex flex-wrap justify-between">
-        <div className="flex items-center">
+        <div className="flex items-center ml-3  mb-3">
           <Logo width="50px" />
           <p className="ml-2 text-sm text-gray-600">
             &copy; {new Date().getFullYear()} DevUI. All Rights Reserved.
@@ -37,7 +37,7 @@ const Footer = () => {
 };
 
 const renderFooterLinks = (title, links) => (
-  <div className="flex flex-col space-y-2">
+  <div className="flex flex-col space-y-2 ml-3 mb-2" >
     <h3 className="text-xs font-semibold uppercase text-gray-500">{title}</h3>
     <ul>
       {links.map((link) => (
