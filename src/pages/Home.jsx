@@ -22,7 +22,6 @@ function Home() {
               <h1 className="text-3xl font-extrabold text-center mb-4 text-gray-800 hover:text-indigo-600 transition-colors">
                 Welcome to Our Blog
               </h1>
-             
               <p className="text-lg text-gray-600 mb-8">
                 Elevate your blogging experience! Sign in to unleash your
                 creativity, craft compelling stories, and embark on your
@@ -35,12 +34,13 @@ function Home() {
       </div>
     );
   }
+
   return (
     <div className="w-full py-8">
       <Container>
         <div className="flex flex-wrap">
           {posts.map((post) => (
-            <div key={post.$id} className="p-2 w-1/4">
+            <div key={post.$id} className="p-2 w-full sm:w-1/2 md:w-full lg:w-1/3">
               <PostCard {...post} />
             </div>
           ))}
